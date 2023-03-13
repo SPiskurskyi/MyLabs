@@ -1,0 +1,6 @@
+﻿  Assembling lab1(2).asm...
+lab1(2).asm(1): error A2008: syntax error : .
+lab1(2).asm(32): error A2024: invalid operand size for instruction
+lab1(2).asm(44): error A2008: syntax error : start
+lab1(2).asm(44): error A2088: END directive required at end of file
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: The command "ml64.exe /c /nologo /Zi /Fo"x64\Debug\lab1(2).obj" /W3 /errorReport:prompt  /Ta"lab1(2).asm"" exited with code 1.
