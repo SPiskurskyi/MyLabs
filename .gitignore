@@ -1,2 +1,7 @@
 .*
-2 course/
+
+!*.cpp
+!*.h
+!*.png
+!*.md
+!*.asm
