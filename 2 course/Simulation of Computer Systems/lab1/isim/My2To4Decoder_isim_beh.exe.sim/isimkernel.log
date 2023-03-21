@@ -1,0 +1,29 @@
+Command line:
+   My2To4Decoder_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  53697
+
+Sun Mar 19 21:03:05 2023
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5150.87 Meg
+
+ Total Signals          : 134
+ Total Nets             : 50
+ Total Signal Drivers   : 44
+ Total Blocks           : 26
+ Total Primitive Blocks : 25
+ Total Processes        : 45
+ Total Traceable Variables  : 42
+ Total Scalar Nets and Variables : 1282
+Total Line Count : 54
+
+ Total Simulation Time: 0.296875 sec
+
+ Current Memory Usage: 5150.87 Meg
+
+Sun Mar 19 21:08:12 2023
+

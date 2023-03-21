@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Polytech\Xilinix Proj\Decoder\My2To4Decoder.ncd
+OUTFILE=D:\Polytech\Xilinix Proj\Decoder\My2To4Decoder.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50a-5tq144
+WORKINGDIR=D:\Polytech\Xilinix Proj\Decoder
+LICENSE=WebPack
+USER_INFO=211628586_0_0_017

@@ -1,0 +1,18 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Mar 19 19:44:19 2023
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "IN_0" LOCATE = SITE "P70" LEVEL 1;
+COMP "IN_1" LOCATE = SITE "P69" LEVEL 1;
+COMP "IN_2" LOCATE = SITE "P68" LEVEL 1;
+COMP "IN_3" LOCATE = SITE "P64" LEVEL 1;
+COMP "OUT_0" LOCATE = SITE "P46" LEVEL 1;
+COMP "OUT_1" LOCATE = SITE "P47" LEVEL 1;
+COMP "OUT_2" LOCATE = SITE "P48" LEVEL 1;
+COMP "OUT_3" LOCATE = SITE "P49" LEVEL 1;
+COMP "OUT_4" LOCATE = SITE "P50" LEVEL 1;
+COMP "OUT_5" LOCATE = SITE "P51" LEVEL 1;
+SCHEMATIC END;
+
