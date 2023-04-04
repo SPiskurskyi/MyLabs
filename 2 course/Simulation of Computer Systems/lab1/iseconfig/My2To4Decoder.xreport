@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2023-03-19T21:09:42</DateModified>
+  <DateModified>2023-04-03T21:22:25</DateModified>
   <ModuleName>My2To4Decoder</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>D:/Polytech/Xilinix Proj/Decoder/iseconfig/My2To4Decoder.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/Polytech/Xilinix Proj/Decoder\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Admin/Desktop/labs/2 course/Simulation of Computer Systems/lab1/iseconfig/My2To4Decoder.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Admin/Desktop/labs/2 course/Simulation of Computer Systems/lab1\</ImplementationReportsDirectory>
   <DateInitialized>2023-03-19T15:41:20</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
