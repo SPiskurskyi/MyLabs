@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "C:/Users/Admin/Desktop/MKS/lab2/out_logic_intf.xst" -ofn "C:/Users/Admin/Desktop/MKS/lab2/out_logic_intf.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 out_logic_intf.ngc out_logic_intf.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o out_logic_intf_map.ncd out_logic_intf.ngd out_logic_intf.pcf 
+par -w -intstyle ise -ol high -t 1 out_logic_intf_map.ncd out_logic_intf.ncd out_logic_intf.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml out_logic_intf.twx out_logic_intf.ncd -o out_logic_intf.twr out_logic_intf.pcf 
+vhdtdtfi -lib work OutputLogic.vhd -prj lab2 -o out_logic_intf.spl -module out_logic_intf -template D:/Polytech/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3a out_logic_intf.spl C:/Users/Admin/Desktop/MKS/lab2/out_logic_intf.sym 
+vhdtdtfi -lib work OutputLogic.vhd -prj Lab_2_Example -o out_logic_intf.spl -module out_logic_intf -template D:/Polytech/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3a -w out_logic_intf.spl C:/Users/Admin/Desktop/MKS/Lab_2_Example/out_logic_intf.sym 
+vhdtdtfi -lib work OutputLogic.vhd -prj Lab_2_Example -o out_logic_intf.spl -module out_logic_intf -template D:/Polytech/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3a -w out_logic_intf.spl C:/Users/Admin/Desktop/MKS/Lab_2_Example/out_logic_intf.sym 

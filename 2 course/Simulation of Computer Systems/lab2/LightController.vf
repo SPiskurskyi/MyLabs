@@ -1,0 +1,53 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : LightController.vf
+// /___/   /\     Timestamp : 04/27/2023 17:36:49
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3a -verilog C:/Users/Admin/Desktop/MKS/copy/LightController.vf -w C:/Users/Admin/Desktop/MKS/copy/LightController.sch
+//Design Name: LightController
+//Device: spartan3a
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module LightController(CLK, 
+                       MODE, 
+                       RST, 
+                       OUT_BUS);
+
+    input CLK;
+    input MODE;
+    input RST;
+   output [7:0] OUT_BUS;
+   
+   wire [2:0] CUR_STATE;
+   wire [2:0] NEXT_STATE;
+   
+   FDR #( .INIT(1'b0) ) XLXI_10 (.C(CLK), 
+                .D(NEXT_STATE[1]), 
+                .R(RST), 
+                .Q(CUR_STATE[1]));
+   FDR #( .INIT(1'b0) ) XLXI_11 (.C(CLK), 
+                .D(NEXT_STATE[2]), 
+                .R(RST), 
+                .Q(CUR_STATE[2]));
+   FDR #( .INIT(1'b0) ) XLXI_12 (.C(CLK), 
+                .D(NEXT_STATE[0]), 
+                .R(RST), 
+                .Q(CUR_STATE[0]));
+   out_logic_intf  XLXI_13 (.IN_BUS(CUR_STATE[2:0]), 
+                           .OUT_BUS(OUT_BUS[7:0]));
+   transition_logic_intf  XLXI_14 (.CUR_STATE(CUR_STATE[2:0]), 
+                                  .MODE(MODE), 
+                                  .NEXT_STATE(NEXT_STATE[2:0]));
+endmodule

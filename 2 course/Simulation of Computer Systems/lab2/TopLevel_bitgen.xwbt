@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Admin\Desktop\MKS\Lab_2_Example\TopLevel.ncd
+OUTFILE=C:\Users\Admin\Desktop\MKS\Lab_2_Example\TopLevel.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50a-5tq144
+WORKINGDIR=C:\Users\Admin\Desktop\MKS\Lab_2_Example
+LICENSE=WebPack
+USER_INFO=211628586_0_0_017

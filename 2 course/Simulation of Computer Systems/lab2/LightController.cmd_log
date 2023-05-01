@@ -1,0 +1,5 @@
+sch2sym -intstyle ise -family spartan3a -refsym LightController C:/Users/Admin/Desktop/MKS/lab2/LightController.sch C:/Users/Admin/Desktop/MKS/lab2/LightController.sym 
+sch2sym -intstyle ise -family spartan3a -refsym LightController C:/Users/Admin/Desktop/MKS/copy/LightController.sch C:/Users/Admin/Desktop/MKS/copy/LightController.sym 
+sch2sym -intstyle ise -family spartan3a -w -refsym LightController C:/Users/Admin/Desktop/MKS/Lab_2_Example/LightController.sch C:/Users/Admin/Desktop/MKS/Lab_2_Example/LightController.sym 
+sch2sym -intstyle ise -family spartan3a -w -refsym LightController C:/Users/Admin/Desktop/MKS/Lab_2_Example/LightController.sch C:/Users/Admin/Desktop/MKS/Lab_2_Example/LightController.sym 
+sch2sym -intstyle ise -family spartan3a -w -refsym LightController C:/Users/Admin/Desktop/MKS/Lab_2_Example/LightController.sch C:/Users/Admin/Desktop/MKS/Lab_2_Example/LightController.sym 

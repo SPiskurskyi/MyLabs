@@ -1,0 +1,12 @@
+AR out_logic_intf out_logic_arch C:/Users/Admin/Desktop/MKS/Lab_2_Example/OutputLogic.vhd sub00/vhpl01 1682953571
+AR lightcontroller_muser_toplevel behavioral C:/Users/Admin/Desktop/MKS/Lab_2_Example/TopLevel.vhf sub00/vhpl07 1682953575
+AR lightcontroller behavioral C:/Users/Admin/Desktop/MKS/Lab_2_Example/LightController.vhf sub00/vhpl11 1682953579
+AR cc16re_hxilinx_toplevel cc16re_hxilinx_toplevel_v C:/Users/Admin/Desktop/MKS/Lab_2_Example/TopLevel.vhf sub00/vhpl05 1682953573
+EN transition_logic_intf NULL C:/Users/Admin/Desktop/MKS/Lab_2_Example/TransitionLogic.vhd sub00/vhpl02 1682953568
+EN lightcontroller_muser_toplevel NULL C:/Users/Admin/Desktop/MKS/Lab_2_Example/TopLevel.vhf sub00/vhpl06 1682953574
+EN toplevel NULL C:/Users/Admin/Desktop/MKS/Lab_2_Example/TopLevel.vhf sub00/vhpl08 1682953576
+AR toplevel behavioral C:/Users/Admin/Desktop/MKS/Lab_2_Example/TopLevel.vhf sub00/vhpl09 1682953577
+EN lightcontroller NULL C:/Users/Admin/Desktop/MKS/Lab_2_Example/LightController.vhf sub00/vhpl10 1682953578
+AR transition_logic_intf transition_logic_arch C:/Users/Admin/Desktop/MKS/Lab_2_Example/TransitionLogic.vhd sub00/vhpl03 1682953569
+EN cc16re_hxilinx_toplevel NULL C:/Users/Admin/Desktop/MKS/Lab_2_Example/TopLevel.vhf sub00/vhpl04 1682953572
+EN out_logic_intf NULL C:/Users/Admin/Desktop/MKS/Lab_2_Example/OutputLogic.vhd sub00/vhpl00 1682953570
