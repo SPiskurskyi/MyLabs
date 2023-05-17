@@ -1,7 +1,0 @@
-[Inputs]
-MODE
-RST
-=CUR_STATE[2:0]=
-[Outputs]
-=NEXT_STATE[2:0]=
-[BiDir]

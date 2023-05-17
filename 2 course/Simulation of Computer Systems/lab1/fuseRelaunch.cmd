@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/Polytech/Xilinix Proj/Decoder/My2To4Decoder_isim_beh.exe" -prj "D:/Polytech/Xilinix Proj/Decoder/My2To4Decoder_beh.prj" "work.My2To4Decoder" "work.glbl" 

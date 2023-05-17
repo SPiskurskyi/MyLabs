@@ -1,3 +1,0 @@
-MODULE TopLevel
-	SUBMODULE LightController
-		INSTANCE XLXI_13

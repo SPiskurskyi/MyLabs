@@ -1,5 +1,0 @@
-set -tmpdir "C:/Users/Admin/Desktop/MKS/lab2/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/Admin/Desktop/MKS/lab2/xst"
-elaborate
--ifn out_logic_intf.prj
--ifmt mixed
