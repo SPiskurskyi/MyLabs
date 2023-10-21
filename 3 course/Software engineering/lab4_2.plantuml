@@ -1,0 +1,69 @@
+@startuml lab4_2
+
+class Server {
+    -version
+    -host
+    +processRequest()
+}
+
+class Database {
+    -servername
+    -username
+    -password
+    +setConnectionData()
+    +mysqlConnect()
+    +mysqlCloseConnection()
+    +selectRequest()
+    +updateRequest()
+}
+
+class FlightRouteController {
+    +availableFlightsRoute()
+    +bookedFlightsRoute()
+}
+
+class HelpController {
+    +help()
+}
+
+class FlightController {
+    +searchFlights()
+    +bookFlight()
+    +payment()
+    +cancelBooking()
+}
+
+abstract Validation {
+    +validate()
+}
+
+class FlightSorting {
+    +sortByDepartureDate()
+    +sortByDestination()
+    +sortByPrice()
+}
+
+class Flight {
+    -flightNumber
+    -departureDate
+    -arrivalDate
+    -destination
+    -price
+    +getFlightNumber()
+    +getDepartureDate()
+    +getArrivalDate()
+    +getDestination()
+    +getPrice()
+    +setFlightDetails()
+}
+
+Server -- FlightRouteController
+FlightRouteController -- FlightController
+FlightController <|-- FlightSorting
+FlightController <|-- Flight
+FlightController <|-- Validation
+FlightRouteController -- HelpController
+Server -- Database
+FlightController -- Database
+
+@enduml

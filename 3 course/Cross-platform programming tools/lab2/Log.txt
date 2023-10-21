@@ -1,0 +1,4 @@
+Ship created
+Engine started
+Autopilot enabled
+Speed was increased to 10 

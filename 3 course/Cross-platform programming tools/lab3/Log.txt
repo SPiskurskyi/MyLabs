@@ -1,0 +1,3 @@
+Ship created
+Frigate Ship fires 20 cannons!
+Frigate Ship engages the enemy!

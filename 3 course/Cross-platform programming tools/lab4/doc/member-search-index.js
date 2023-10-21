@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"ki307.piskurskyi.lab5","c":"Calc","l":"Calc()","u":"%3Cinit%3E()"},{"p":"ki307.piskurskyi.lab5","c":"CalcApp","l":"CalcApp()","u":"%3Cinit%3E()"},{"p":"ki307.piskurskyi.lab5","c":"Calc","l":"calculate(int)"},{"p":"ki307.piskurskyi.lab5","c":"CalcApp","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();

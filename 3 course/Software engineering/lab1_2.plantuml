@@ -1,0 +1,43 @@
+@startuml BookingSystem
+
+left to right direction
+actor "Сервер" as Server
+
+rectangle "Система бронювання та купівлі авіаквитків" {
+usecase "Перенаправлення на сторінку пошуку рейсів" as SearchFlightsPage
+usecase "Обробка та валідація даних пошуку" as SearchFlightsValidation
+usecase "Показати доступні рейси" as ShowAvailableFlights
+usecase "Помилка пошуку рейсів" as SearchFlightsError
+
+usecase "Перенаправлення на сторінку бронювання" as BookingPage
+usecase "Обробка та валідація даних бронювання" as BookingValidation
+usecase "Підтвердження бронювання" as BookingConfirmation
+usecase "Помилка бронювання" as BookingError
+
+usecase "Перенаправлення на сторінку оплати" as PaymentPage
+usecase "Обробка та валідація даних оплати" as PaymentValidation
+usecase "Підтвердження оплати" as PaymentConfirmation
+usecase "Помилка оплати" as PaymentError
+
+usecase "Перенаправлення на сторінку допомоги" as HelpPage
+}
+
+Server --> SearchFlightsPage
+Server --> BookingPage
+Server --> PaymentPage
+Server --> HelpPage
+
+SearchFlightsValidation <.down. SearchFlightsPage: include
+ShowAvailableFlights .up.> SearchFlightsValidation: extends
+SearchFlightsError .up.> SearchFlightsValidation: extends
+BookingPage .up.> ShowAvailableFlights: include
+
+BookingValidation <.down. BookingPage: include
+BookingConfirmation .up.> BookingValidation: extends
+BookingError .up.> BookingValidation: extends
+
+PaymentValidation <.down. PaymentPage: include
+PaymentConfirmation .up.> PaymentValidation: extends
+PaymentError .up.> PaymentValidation: extends
+
+@endumlі

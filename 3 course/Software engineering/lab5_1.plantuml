@@ -1,0 +1,35 @@
+@startuml lab5_1
+
+skinparam Linetype ortho
+
+package UIPart {
+    [Кнопка допомоги] as HelpButton
+    [Кнопка пошуку рейсів] as SearchFlightsButton
+    [Кнопка бронювання] as BookFlightButton
+    [Список доступних рейсів] as AvailableFlightsList
+    [Параметри пошуку] as SearchParameters
+    [Кнопка оплати] as PayButton
+}
+
+package ServerPart {
+    [Пошук рейсів] as SearchFlights
+    [Бронювання рейсу] as BookFlight
+    [Оплата рейсу] as PayForFlight
+    [Перенаправити на сторінку з допомогою] as RedirectToHelpPage
+    [Перенаправити на сторінку бронювань] as RedirectToBookingPage
+}
+
+HelpButton -up-( HTTP
+SearchFlightsButton -up-( HTTP
+BookFlightButton -up-( HTTP
+AvailableFlightsList -up-( HTTP
+SearchFlightsButton -up-> SearchParameters
+PayButton -up-( HTTP
+
+SearchFlights -down-( HTTP
+BookFlight -down-( HTTP
+PayForFlight -down-( HTTP
+RedirectToHelpPage -down-( HTTP
+RedirectToBookingPage -down-( HTTP
+
+@enduml

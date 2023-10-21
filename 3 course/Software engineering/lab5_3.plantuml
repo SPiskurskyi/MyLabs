@@ -1,0 +1,68 @@
+@startuml lab5_3
+
+skinparam Linetype ortho
+
+package UIPart {
+    [Book Flight Button] as BookFlightButton
+    [Search Flight Button] as SearchFlightButton
+    [My Bookings Button] as MyBookingsButton
+    [Check-in Button] as CheckInButton
+    [Flight Details Dropdown] as FlightDetailsDropdown
+    [Search Criteria] as SearchParameters
+}
+
+package Server {
+    [Handle Request] as ProcessRequest
+
+    package RouteController {
+        [flightSearchRoute] as FlightSearchRoute
+        [bookingRoute] as BookingRoute
+    }
+
+    package FlightController {
+        [Search Flights Page] as FlightSearchPage
+        [Flight Details] as FlightDetailsPage
+        [Booking Confirmation] as BookingConfirmation
+    }
+
+    package BookingController {
+        [My Bookings Page] as MyBookingsPage
+        [Check-in Page] as CheckInPage
+    }
+
+    package Database {
+        [Set DB Info] as setConnectionData
+        [Connect to DB] as connect
+        [Disconnect from DB] as disconnect
+        [Select Query] as selectRequest
+        [Update Query] as updateRequest
+    }
+}
+
+database Flights {
+    [Flight ID] as FlightID
+    [Departure] as Departure
+    [Arrival] as Arrival
+    [Date] as FlightDate
+    [Price] as Price
+    [Status] as FlightStatus
+}
+
+Flights -down-(TCP/IP)
+ProcessRequest -down-> RouteController
+FlightSearchRoute -right-> FlightController
+BookingRoute -right-> BookingController
+FlightController -up-> Database
+BookingController -up-> Database
+
+connect -up-(TCP/IP)
+disconnect -up-(TCP/IP)
+selectRequest -up-(TCP/IP)
+updateRequest -up-(TCP/IP)
+
+UIPart -down-(HTTP)
+FlightDetailsDropdown -down-> SearchParameters
+
+Server -up-(HTTP)
+
+@enduml

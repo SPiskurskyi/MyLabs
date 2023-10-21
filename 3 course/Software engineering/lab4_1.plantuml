@@ -1,0 +1,35 @@
+@startuml lab4_2
+
+class Passenger {
+    -username
+    -password
+    +login()
+}
+
+class FlightSearchView {
+    +displayAvailableFlights()
+    +selectFlight()
+}
+
+class BookingView {
+    +displayBookingForm()
+    +submitBooking()
+    +validateBookingForm()
+}
+
+class PaymentView {
+    +displayPaymentForm()
+    +submitPayment()
+    +validatePaymentForm()
+}
+
+class HelpView {
+    +displayHelpPage()
+}
+
+Passenger <-- FlightSearchView
+Passenger <-- BookingView
+Passenger <-- PaymentView
+Passenger <-- HelpView
+
+@enduml

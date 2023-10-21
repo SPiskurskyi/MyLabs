@@ -1,0 +1,6 @@
+﻿  Assembling calc.asm...
+calc.asm(1): error A2008: syntax error : .
+calc.asm(2): error A2008: syntax error : .
+calc.asm(9): error A2070: invalid instruction operands
+calc.asm(55): error A2070: invalid instruction operands
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: The command "ml64.exe /c /nologo /Zi /Fo"x64\Debug\calc.obj" /W3 /errorReport:prompt  /Tacalc.asm" exited with code 1.

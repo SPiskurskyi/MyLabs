@@ -1,0 +1,55 @@
+@startuml lab1_1
+
+left to right direction
+actor "Користувач" as User
+rectangle "Система бронювання та купівлі авіаквитків" {
+    usecase "Пошук рейсів" as SearchFlights
+    usecase "Вибір рейсу" as SelectFlight
+    usecase "Бронювання квитка" as ReserveTicket
+    usecase "Оплата квитка" as PurchaseTicket
+    usecase "Відміна бронювання" as CancelReservation
+    usecase "Відображення рейсів" as DisplayFlights
+    usecase "Допомога" as Help
+
+    usecase "Вибір місця" as SelectSeat
+    usecase "Вибір класу" as SelectClass
+    usecase "Вибір пасажирів" as SelectPassengers
+
+    usecase "Підтвердження оплати" as ConfirmPayment
+
+    usecase "Виписка квитків" as GenerateTickets
+    usecase "Відправлення квитків" as SendTickets
+
+    usecase "Запит на зміну рейсу" as ChangeFlightRequest
+    usecase "Запит на повернення квитка" as RefundRequest
+    usecase "Скасування оплати" as CancelPayment
+    usecase "Відображення історії" as ViewHistory
+    usecase "Зворотний зв'язок" as Feedback
+} 
+
+User --> SearchFlights
+User --> Help
+
+SelectSeat <.up. ReserveTicket: includes
+SelectClass <.up. ReserveTicket: includes
+SelectPassengers <.up. ReserveTicket: includes
+ConfirmPayment <.up. PurchaseTicket: includes
+
+SelectFlight .> SearchFlights: extends
+ReserveTicket .> SelectFlight: extends
+PurchaseTicket .> ReserveTicket: extends
+CancelReservation .> ReserveTicket: extends
+
+DisplayFlights .> SearchFlights: extendsІ
+
+GenerateTickets <.up. PurchaseTicket: includes
+SendTickets <.up. PurchaseTicket: includes
+
+ChangeFlightRequest <.up. CancelReservation: includes
+RefundRequest <.up. CancelReservation: includes
+CancelPayment <.up. CancelReservation: includes
+
+ViewHistory .> User: extends
+Feedback .> User: extends
+
+@enduml

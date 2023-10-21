@@ -1,0 +1,4 @@
+﻿  Assembling calc.asm...
+  main.cpp
+C:\Users\admin\Desktop\MyLabs\3 course\System programming\lab2\lab2x64\main.cpp(40,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  lab2x64.vcxproj -> C:\Users\admin\Desktop\MyLabs\3 course\System programming\lab2\x64\Debug\lab2x64.exe

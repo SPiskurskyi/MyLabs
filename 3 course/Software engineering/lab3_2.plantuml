@@ -1,0 +1,62 @@
+@startuml lab3_2
+
+participant "Сервер" as Server
+participant "Сторінка з допомогою" as HelpPage
+participant "Контролер рейсів" as FlightsController
+participant "Контролер деталей рейсу" as FlightDetailsController
+participant "Контролер бронювань" as BookingController
+participant "Контролер купівлі" as PurchaseController
+database "База даних рейсів" as FlightsDB
+
+Server -> HelpPage : Запит перегляду сторінки допомоги
+activate Server
+activate HelpPage
+HelpPage --> Server : Поверення сторінки
+deactivate HelpPage
+deactivate Server
+
+Server -> FlightsController : Запит доступних рейсів
+activate Server
+activate FlightsController
+FlightsController -> FlightsDB : Отримання списку рейсів
+activate FlightsDB
+FlightsDB -> FlightsController : Повернення списку рейсів
+deactivate FlightsDB
+FlightsController --> Server : Поверення списку рейсів
+deactivate FlightsController
+deactivate Server
+
+Server -> FlightDetailsController : Запит деталей рейсу
+activate Server
+activate FlightDetailsController
+FlightDetailsController -> FlightsDB : Отримання деталей рейсу
+activate FlightsDB
+FlightsDB -> FlightDetailsController : Повернення деталей рейсу
+deactivate FlightsDB
+FlightDetailsController --> Server : Поверення деталей рейсу
+deactivate FlightDetailsController
+deactivate Server
+
+Server -> BookingController : Запит на бронювання рейсу
+activate Server
+activate BookingController
+BookingController -> FlightsDB : Бронювання місця на рейсі
+activate FlightsDB
+FlightsDB -> BookingController : Підтвердження бронювання
+deactivate FlightsDB
+BookingController --> Server : Поверення підтвердження
+deactivate BookingController
+deactivate Server
+
+Server -> PurchaseController : Запит купівлі авіаквитка
+activate Server
+activate PurchaseController
+PurchaseController -> FlightsDB : Оформлення купівлі квитка
+activate FlightsDB
+FlightsDB -> PurchaseController : Підтвердження купівлі
+deactivate FlightsDB
+PurchaseController --> Server : Надсилання електронного квитка
+deactivate PurchaseController
+deactivate Server
+
+@enduml

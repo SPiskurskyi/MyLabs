@@ -1,0 +1,53 @@
+@startuml lab5_2
+
+skinparam Linetype ortho
+
+package Server {
+    [Опрацювання запиту] as ProcessRequest
+
+    package RouteController {
+        [flightRoute] as FlightRoute
+        [helpRoute] as HelpRoute
+    }
+
+    package FlightController {
+        [Сторінка рейсів] as FlightIndex
+        [Сторінка бронювання рейсу] as FlightBook
+        [Сторінка оплати рейсу] as FlightPayment
+        [Запит пошуку рейсів] as FlightSearch
+        [Запит оплати рейсу] as FlightPay
+    }
+
+    package HelpController {
+        [Сторінка допомоги] as HelpPage
+    }
+
+    package Database {
+        [Вказати дані БД] as setConnectionData
+        [Підключитись до БД] as connect
+        [Закрити з'єднання з БД] as disconnect
+        [Запит вибірки рейсів] as selectFlights
+        [Запит бронювання рейсу] as bookFlight
+    }
+}
+
+database Flights {
+    [Id] as id
+    [Місце відправлення] as Departure
+    [Місце прибуття] as Arrival
+    [Дата і час] as DateTime
+    [Ціна] as Price
+}
+
+Flights -down-(TCP/IP)
+ProcessRequest -down-> RouteController
+HelpRoute -down-> HelpPage
+FlightRoute -right-> FlightController
+FlightController -up-> Database
+
+connect -up-(TCP/IP)
+disconnect -up-(TCP/IP)
+selectFlights -up-(TCP/IP)
+bookFlight -up-(TCP/IP)
+
+@enduml

@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"ki307.piskurskyi.lab6","c":"FIOApp","l":"FIOApp()","u":"%3Cinit%3E()"},{"p":"ki307.piskurskyi.lab6","c":"FIOApp","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();

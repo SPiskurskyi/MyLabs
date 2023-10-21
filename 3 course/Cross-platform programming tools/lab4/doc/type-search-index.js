@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"ki307.piskurskyi.lab5","l":"Calc"},{"p":"ki307.piskurskyi.lab5","l":"CalcApp"}];updateSearchResults();
