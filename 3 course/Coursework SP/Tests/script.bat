@@ -1,0 +1,17 @@
+del "test1.asm"
+del "test1.exe"
+del "test1.obj"
+del "test1_errors.txt"
+del "test1_lexems.txt"
+
+del "test2.asm"
+del "test2.exe"
+del "test2.obj"
+del "test2_errors.txt"
+del "test2_lexems.txt"
+ 
+del "test3.asm"
+del "test3.exe"
+del "test3.obj"
+del "test3_errors.txt"
+del "test3_lexems.txt"

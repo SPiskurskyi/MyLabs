@@ -1,0 +1,16 @@
+!! Coment
+#Program test1;
+Start
+Variable Integer a,b,x,y;
+Scan(a);
+Scan(b);
+Print(a + b);
+Print(a + b);
+Print(a Mul b);5
+Print(a Div b);
+Print(a Mod b);
+x<<(a - b) Mul 10 + (a + b) Div 10;
+y<<x + (x Mod 10);
+Print(x);
+Print(y);
+Stop

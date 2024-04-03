@@ -1,0 +1,8 @@
+﻿  pch.cpp
+  dllmain.cpp
+  implementation.cpp
+C:\Users\admin\Desktop\MyLabs\3 course\System programming\lab4\Dll1\implementation.cpp(4,5): warning C4273: 'implementation': inconsistent dll linkage
+C:\Users\admin\Desktop\MyLabs\3 course\System programming\lab4\Dll1\implementation.h(15,18): message : see previous definition of 'implementation'
+  Generating Code...
+     Creating library C:\Users\admin\Desktop\MyLabs\3 course\System programming\lab4\x64\Debug\Dll1.lib and object C:\Users\admin\Desktop\MyLabs\3 course\System programming\lab4\x64\Debug\Dll1.exp
+  Dll1.vcxproj -> C:\Users\admin\Desktop\MyLabs\3 course\System programming\lab4\x64\Debug\Dll1.dll

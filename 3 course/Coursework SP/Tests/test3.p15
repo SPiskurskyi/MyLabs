@@ -1,0 +1,23 @@
+!! Coment
+#Program test3;
+Start
+Variable Integer a,a2,b,x,c1,c2;
+Scan(a);
+Scan(b);
+a2<<a;
+Do
+	Print(a2 Mul a2);
+	a2<<a2 + 1;
+While(!(a2 > b));
+x<<0;
+c1<<1;
+Do
+	c2<<1;
+	Do
+		x<<x + 1;
+		c2<<c2 + 1;
+	While(!(c2 > b));
+	c1<<c1 + 1;
+While(!(c1 > a));
+Print(x);
+Stop

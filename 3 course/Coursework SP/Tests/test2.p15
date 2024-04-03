@@ -1,0 +1,42 @@
+!! Coment
+#Program test2;
+Start
+Variable Integer a,b,c;
+Scan(a);
+Scan(b);
+Scan(c);
+If(a < b)
+Start
+	If(a > c)
+	Start
+		Print(c);
+	Else
+		Print(a);
+	Stop
+Else
+	If(b > c)
+	Start
+		Print(c);
+	Else
+		Print(b);
+	Stop
+Stop
+If((a = b) And (a = c) And (b = c))
+Start
+	Print(1);
+Else
+	Print(0);
+Stop
+If((a > 0) Or (b > 0) Or (c > 0))
+Start
+	Print(- 1);
+Else
+	Print(0);
+Stop
+If(!(a > (b + c)))
+Start
+	Print(10);
+Else
+	Print(0);
+Stop
+Stop

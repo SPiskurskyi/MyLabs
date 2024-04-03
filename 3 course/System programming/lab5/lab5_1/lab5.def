@@ -1,0 +1,3 @@
+LIBRARY lab5
+EXPORTS
+	MyFunction

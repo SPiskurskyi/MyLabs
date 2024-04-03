@@ -1,0 +1,6 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppClean.targets(77,5): warning : Access to the path 'c:\users\admin\desktop\mylabs\3 course\system programming\lab5\debug\lab5_1.dll' is denied.
+  Assembling lab5.asm...
+lab5.asm(56): warning A6004: procedure argument or local not referenced : hInstDLL
+lab5.asm(56): warning A6004: procedure argument or local not referenced : reason
+lab5.asm(56): warning A6004: procedure argument or local not referenced : reserved
+LINK : fatal error LNK1104: cannot open file 'C:\Users\admin\Desktop\MyLabs\3 course\System programming\lab5\Debug\lab5_1.dll'
