@@ -1,0 +1,3 @@
+﻿  lab2.c
+C:\Users\admin\Desktop\СПЗ\lab2\lab2\lab2.c(25,11): warning C4013: 'time' undefined; assuming extern returning int
+  lab2.vcxproj -> C:\Users\admin\Desktop\СПЗ\lab2\x64\Debug\lab2.exe

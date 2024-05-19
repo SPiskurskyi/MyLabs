@@ -1,0 +1,30 @@
+Matrix B = 
+1	0	1	
+1	1	1	
+1	0	1	
+
+Matrix B = 
+0	0	0	
+5	1	7	
+7	7	4	
+
+(common) Matrix C = A * B = 
+7	7	4	
+12	8	11	
+7	7	4	
+
+(program with one-time assignment) Matrix C = A * B = 
+7	7	4	
+12	8	11	
+7	7	4	
+
+(program with the localized algorithm) Matrix C = A * B = 
+7	7	4	
+12	8	11	
+7	7	4	
+
+(program with the recursive localized algorithm) Matrix C = A * B = 
+7	7	4	
+12	8	11	
+7	7	4	
+

@@ -1,0 +1,8 @@
+﻿  lab2_generic.cpp
+C:\Users\admin\Desktop\ПРО\lab2\lab2_generic\lab2_generic.cpp(144,14): warning C4244: 'initializing': conversion from '_Rep' to 'int', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+C:\Users\admin\Desktop\ПРО\lab2\lab2_generic\lab2_generic.cpp(272,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  lab2_generic.vcxproj -> C:\Users\admin\Desktop\ПРО\lab2\x64\Debug\lab2_generic.exe

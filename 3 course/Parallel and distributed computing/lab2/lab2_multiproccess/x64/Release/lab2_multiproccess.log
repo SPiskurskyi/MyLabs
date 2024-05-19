@@ -1,0 +1,13 @@
+﻿  lab2_multiproccess.cpp
+C:\Users\admin\Desktop\ПРО\lab2\lab2_multiproccess\lab2_multiproccess.cpp(253,18): warning C4244: 'initializing': conversion from '_Rep' to 'int', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+C:\Users\admin\Desktop\ПРО\lab2\lab2_multiproccess\lab2_multiproccess.cpp(409,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating code
+  1 of 203 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    7 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  lab2_multiproccess.vcxproj -> C:\Users\admin\Desktop\ПРО\lab2\x64\Release\lab2_multiproccess.exe

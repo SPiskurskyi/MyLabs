@@ -1,0 +1,4 @@
+﻿  lab6-7.cpp
+C:\Users\admin\Desktop\ЗІКС\lab6-7\lab6-7\lab6-7.cpp(12,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\admin\Desktop\ЗІКС\lab6-7\lab6-7\lab6-7.cpp(21,34): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  lab6-7.vcxproj -> C:\Users\admin\Desktop\ЗІКС\lab6-7\x64\Debug\lab6-7.exe

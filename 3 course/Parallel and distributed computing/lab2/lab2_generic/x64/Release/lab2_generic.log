@@ -1,0 +1,12 @@
+﻿  lab2_generic.cpp
+C:\Users\admin\Desktop\ПРО\lab2\lab2_generic\lab2_generic.cpp(144,14): warning C4244: 'initializing': conversion from '_Rep' to 'int', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+C:\Users\admin\Desktop\ПРО\lab2\lab2_generic\lab2_generic.cpp(272,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 201 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  lab2_generic.vcxproj -> C:\Users\admin\Desktop\ПРО\lab2\x64\Release\lab2_generic.exe

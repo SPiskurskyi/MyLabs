@@ -1,0 +1,5 @@
+﻿  lab5_1.cpp
+C:\Users\admin\Desktop\СПЗ\lab5\lab5_1\lab5_1.cpp(103,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\admin\Desktop\СПЗ\lab5\lab5_1\lab5_1.cpp(127,51): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\admin\Desktop\СПЗ\lab5\lab5_1\lab5_1.cpp(26,10): warning C4101: 'msg': unreferenced local variable
+  lab5_1.vcxproj -> C:\Users\admin\Desktop\СПЗ\lab5\x64\Debug\lab5_1.exe

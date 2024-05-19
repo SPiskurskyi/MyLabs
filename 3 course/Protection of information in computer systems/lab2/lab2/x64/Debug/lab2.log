@@ -1,0 +1,6 @@
+﻿  lab2.cpp
+C:\Users\admin\Desktop\ЗІКС\lab2\lab2\lab2.cpp(10,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\admin\Desktop\ЗІКС\lab2\lab2\lab2.cpp(11,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\admin\Desktop\ЗІКС\lab2\lab2\lab2.cpp(36,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\admin\Desktop\ЗІКС\lab2\lab2\lab2.cpp(37,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  lab2.vcxproj -> C:\Users\admin\Desktop\ЗІКС\lab2\x64\Debug\lab2.exe
