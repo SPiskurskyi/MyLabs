@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>KI-404 Piskurskyi</title>
+</head>
+<body>
+    <script>
+        let fruits = ['apple', 'pineapple', 'mango', 'melon', 'grape'];
+        let citrus = ['orange', 'lemon', 'lime'];
+
+        document.write("<strong>Fruits:</strong> " + fruits.join(", ") + "<br>");
+        document.write("<strong>Citrus:</strong> " + citrus.join(", ") + "<br>");
+
+        // Об'єднаний масив fruits та citrus
+        let combined = fruits.concat(citrus);
+        document.write("<strong>Об'єднаний масив:</strong> " + combined.join(", ") + "<br>");
+
+        // Вставка після "mango"
+        let fruitsWithInsert = [...fruits];
+        let index = fruitsWithInsert.indexOf("mango");
+        if (index !== -1) {
+            fruitsWithInsert.splice(index + 1, 0, "pear", "cherry", "plum", "raspberry", "strawberry");
+        }
+        document.write("<strong>Масив після вставки:</strong> " + fruitsWithInsert.join(", ") + "<br>");
+
+        // Видалення останніх 3 елементів
+        let fruitsTrimmed = fruits.slice(0, -3);
+        document.write("<strong>Масив після видалення 3 елементів:</strong> " + fruitsTrimmed.join(", ") + "<br>");
+
+        // Сортування в алфавітному порядку
+        let sortedFruits = [...fruits].sort();
+        document.write("<strong>Відсортовано алфавітно:</strong> " + sortedFruits.join(", ") + "<br>");
+
+        // Сортування у зворотному алфавітному порядку
+        let reversedFruits = [...sortedFruits].reverse();
+        document.write("<strong>Зворотний порядок:</strong> " + reversedFruits.join(", ") + "<br>");
+
+        // Сортування за довжиною слів
+        let sortedByLength = [...fruits].sort((a, b) => a.length - b.length);
+        document.write("<strong>Сортовані за довжиною:</strong> " + sortedByLength.join(", ") + "<br>");
+    </script>
+</body>
+</html>

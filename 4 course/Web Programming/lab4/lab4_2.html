@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>KI-404 Piskurskyi</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h2 style='text-align:center'>Робота з масивами</h2>");
+
+      let arr = [];
+      for (let i = 0; i < 15; i++) {
+        arr[i] = Math.floor(Math.random() * 100) + 1;
+      }
+      document.write("<p>Початковий масив: " + arr.join("  ") + "</p>");
+
+      let minIndex = 0;
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < arr[minIndex]) {
+          minIndex = i;
+        }
+      }
+
+      // common swap
+      let temp = arr[2];
+      arr[2] = arr[minIndex];
+      arr[minIndex] = temp;
+
+      document.write("<p>Масив після заміни: " + arr.join("  ") + "</p>");
+    </script>
+  </body>
+</html>

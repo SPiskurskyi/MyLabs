@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>KI-404 Piskurskyi</title>
+</head>
+<body>
+    <script>
+        // let str = prompt("Введіть рядок:");
+        let str = "AAB*CCCA*BBCC/ABC*C/";
+
+        // Вставлення символу ';' після кожного 'A' і 'B'
+        let modifiedStr = str.replace(/A/g, 'A;').replace(/B/g, 'B;');
+        document.write("<p>Змінений рядок: " + modifiedStr + "</p>");
+
+        // Підрахунок 'C' між '*' та '/'
+        let count = 0;
+        let between = false;
+        
+        for (let char of str) {
+            if (char === '*') between = true;
+            else if (char === '/') between = false;
+            else if (char === 'C' && between) count++;
+        }
+
+        document.write("<p>Кількість 'C' між '*' та '/': " + count + "</p>");
+    </script>
+</body>
+</html>

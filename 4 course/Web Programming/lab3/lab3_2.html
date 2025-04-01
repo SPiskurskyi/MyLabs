@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>KI-404 Piskurskyi</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      let today = new Date();
+      let newYearDay = new Date(today.getFullYear() + 1, 0, 1);
+      const day = 86400000;
+      const hour = 3600000;
+      const minute = 60000;
+      let time = newYearDay.getTime() - today.getTime();
+      let days = Math.floor(time / day);
+      let hours = Math.floor((time - days * day) / hour);
+      let minutes = Math.floor((time - days * day - hours * hour) / minute);
+      let str = days + " днів, " + hours + " годин, " + minutes + " хвилин.";
+      console.log("До Нового року залишилося ", str);
+      alert("До Нового року залишилося " + str);
+    </script>
+  </body>
+</html>

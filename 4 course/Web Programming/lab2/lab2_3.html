@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>KI-404 Piskurskyi</title>
+  </head>
+  <body>
+    <script>
+      document.write(
+        "<h2 style='text-align:center'>Використання оператора <strong>SWITCH</strong></h2>"
+      );
+      document.write(
+        "<p style='text-align:center'>Завдання: Створіть файл lab2_3.html, що містить наступний скрипт, який демонструє \
+        можливості використання оператора SWITCH. Наприклад, задати змінну day, яка приймає значення \
+        від 1 до 7, введене користувачем. Використовуючи switch-case, забезпечити виведення назви \
+        відповідного дня тижня. Якщо введене значення не знаходиться в межах 1-7, вивести повідомлення \
+        «Некоректний номер дня».</p>"
+      );
+
+      let day = prompt("Введіть номер дня тижня (1-7):");
+
+      switch (day) {
+        case "1":
+          document.write("Понеділок");
+          break;
+        case "2":
+          document.write("Вівторок");
+          break;
+        case "3":
+          document.write("Середа");
+          break;
+        case "4":
+          document.write("Четвер");
+          break;
+        case "5":
+          document.write("П’ятниця");
+          break;
+        case "6":
+          document.write("Субота");
+          break;
+        case "7":
+          document.write("Неділя");
+          break;
+        default:
+          document.write("Некоректний номер дня");
+      }
+    </script>
+  </body>
+</html>

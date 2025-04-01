@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>KI-404 Piskurskyi</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      let today = new Date();
+      let hours = today.getHours();
+      let minute = today.getMinutes();
+      if (minute < 10) minute = "0" + minute;
+      if (hours < 12) {
+        var time12 = hours + ":" + minute + " am ";
+      } else {
+        var time12 = hours - 12 + ":" + minute + " pm ";
+      }
+      console.log("поточний час -", time12);
+      alert("поточний час -" + time12);
+
+      function weekDay(size, day, color) {
+          document.write("<p style='font-size:" + size + "px; color:" + color + "'>" + day + "</p>");
+      }
+      weekDay(75, "Понеділок", "blue");
+      weekDay(65, "Вівторок", "green");
+      weekDay(55, "Середа", "orange");
+      weekDay(45, "Четвер", "red");
+      weekDay(35, "П'ятниця", "green");
+      weekDay(25, "Субота", "blue");
+      weekDay(15, "Неділя", "yellow");
+    </script>
+  </body>
+</html>
+

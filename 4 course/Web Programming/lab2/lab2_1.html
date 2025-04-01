@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>KI-404 Piskurskyi</title>
+  </head>
+  <body>
+    <script>
+      document.write(
+        "<h2 style='text-align:center'>Використання оператора <strong>IF</strong></h2>"
+      );
+      document.write(
+        "<p style='text-align:center'>Завдання: Створіть файл lab2_2.html, що містить наступний скрипт, який демонструє \
+        можливості використання умовного оператора IF. Наприклад, задати змінну day, яка приймає значення \
+        від 1 до 7, введене користувачем. Використовуючи if-else-elseif, забезпечити виведення назви \
+        відповідного дня тижня. Якщо введене значення не знаходиться в межах 1-7, вивести повідомлення \
+        «Некоректний номер дня».</p>"
+      );
+
+      let day = prompt("Введіть номер дня тижня (1-7):");
+
+      if (day == "1") {
+        document.write("Понеділок");
+      } else if (day == "2") {
+        document.write("Вівторок");
+      } else if (day == "3") {
+        document.write("Середа");
+      } else if (day == "4") {
+        document.write("Четвер");
+      } else if (day == "5") {
+        document.write("П’ятниця");
+      } else if (day == "6") {
+        document.write("Субота");
+      } else if (day == "7") {
+        document.write("Неділя");
+      } else {
+        document.write("Некоректний номер дня");
+      }
+    </script>
+  </body>
+</html>

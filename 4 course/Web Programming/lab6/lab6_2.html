@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>KI-404 Piskurskyi</title>
+</head>
+<body>
+    <script>
+        function FitnessBracelet(ram, platforms, sensors) {
+            this._ram = ram;
+            this._platforms = platforms;
+            this._sensors = sensors;
+        }
+
+        FitnessBracelet.prototype = {
+            get ram() {
+                return this._ram;
+            },
+            set ram(value) {
+                if (value > 0) {
+                    this._ram = value;
+                } else {
+                    console.error("Об'єм оперативної пам'яті має бути більше 0!");
+                }
+            },
+
+            get platforms() {
+                return this._platforms;
+            },
+            set platforms(value) {
+                if (Array.isArray(value)) {
+                    this._platforms = value;
+                } else {
+                    console.error("Платформи повинні бути у вигляді масиву!");
+                }
+            },
+
+            get sensors() {
+                return this._sensors;
+            },
+            set sensors(value) {
+                if (Array.isArray(value)) {
+                    this._sensors = value;
+                } else {
+                    console.error("Датчики повинні бути у вигляді масиву!");
+                }
+            }
+        };
+
+        FitnessBracelet.prototype.releaseDate = "2024-01-15";
+
+        FitnessBracelet.prototype.showInfo = function () {
+            document.write("<h2>Характеристики фітнес-браслета:</h2>");
+            document.write("<p><strong>Об'єм оперативної пам'яті:</strong> " + this.ram + "</p>");
+            document.write("<p><strong>Підтримувані платформи:</strong> " + this.platforms.join(", ") + "</p>");
+            document.write("<p><strong>Датчики:</strong> " + this.sensors.join(", ") + "</p>");
+            document.write("<p><strong>Дата виходу на ринок:</strong> " + this.releaseDate + "</p>");
+        };
+
+        let myBracelet = new FitnessBracelet("512 KB", ["Android", "iOS"], ["Пульсометр", "Акселерометр", "Гіроскоп"]);
+
+        myBracelet.showInfo();
+    </script>
+</body>
+</html>

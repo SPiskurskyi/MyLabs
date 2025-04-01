@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>KI-404 Piskurskyi</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h2 style='text-align:center'>Використання циклу <strong>for...in</strong></h2>");
+      document.write(
+        "<p style='text-align:center'>Завдання: Створіть файл lab2_5.html, що містить скрипт, який демонструє використання \
+        оператора циклу for...in для перебору властивостей об'єкта.</p>"
+      );
+
+      let person = {
+        name: "Олександр",
+        age: 25,
+        city: "Київ",
+        profession: "Розробник"
+      };
+
+      document.write("<h3>Інформація про користувача:</h3><ul>");
+      for (let key in person) {
+        document.write(`<li><strong>${key}:</strong> ${person[key]}</li>`);
+      }
+      document.write("</ul>");
+    </script>
+  </body>
+</html>

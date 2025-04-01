@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>KI-404 Piskurskyi</title>
+</head>
+<body>
+    <script>
+        class FitnessBracelet {
+            constructor(ram, platforms, sensors) {
+                this.ram = ram;
+                this.platforms = platforms;
+                this.sensors = sensors;
+            }
+        }
+
+        class SmartFitnessBracelet extends FitnessBracelet {
+            constructor(ram, platforms, sensors, releaseDate, price) {
+                super(ram, platforms, sensors);
+                this.releaseDate = releaseDate;
+                this.price = price;
+            }
+        }
+
+        let bracelets = [
+            new SmartFitnessBracelet("512 MB", ["Android", "iOS"], ["Пульсометр", "GPS"], "2023-05-10", 1999),
+            new SmartFitnessBracelet("1 GB", ["Android", "iOS"], ["Акселерометр", "Гіроскоп"], "2024-02-15", 2499),
+            new SmartFitnessBracelet("2 GB", ["Android", "iOS"], ["Пульсометр", "GPS", "Акселерометр"], "2023-09-01", 3299),
+            new SmartFitnessBracelet("1.5 GB", ["Android"], ["Пульсометр", "Гіроскоп"], "2022-12-20", 2799),
+            new SmartFitnessBracelet("1 GB", ["iOS"], ["Гіроскоп", "GPS"], "2023-07-11", 1599)
+        ];
+
+        // Знайти мінімальну та максимальну вартість
+        let minPriceBracelet = bracelets.reduce((min, b) => (b.price < min.price ? b : min));
+        let maxPriceBracelet = bracelets.reduce((max, b) => (b.price > max.price ? b : max));
+
+        // Знайти сумарну вартість
+        let totalPrice = bracelets.reduce((sum, b) => sum + b.price, 0);
+
+        // Обчислити середню вартість
+        let avgPrice = totalPrice / bracelets.length;
+
+        // Підрахувати кількість об'єктів з вартістю вище за середню
+        let countAboveAvg = bracelets.filter(b => b.price > avgPrice).length;
+
+        document.write("<h2>Аналіз масиву фітнес-браслетів</h2>");
+        document.write(`<p><strong>Мінімальна вартість:</strong> ${minPriceBracelet.price} грн (модель з ${minPriceBracelet.ram} RAM)</p>`);
+        document.write(`<p><strong>Максимальна вартість:</strong> ${maxPriceBracelet.price} грн (модель з ${maxPriceBracelet.ram} RAM)</p>`);
+        document.write(`<p><strong>Сумарна вартість всіх браслетів:</strong> ${totalPrice} грн</p>`);
+        document.write(`<p><strong>Середня вартість браслета:</strong> ${avgPrice.toFixed(2)} грн</p>`);
+        document.write(`<p><strong>Кількість браслетів з вартістю вище за середню:</strong> ${countAboveAvg}</p>`);
+    </script>
+</body>
+</html>

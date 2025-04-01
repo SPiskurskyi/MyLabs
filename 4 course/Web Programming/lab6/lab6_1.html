@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>KI-404 Piskurskyi</title>
+</head>
+<body>
+    <script>
+        let fitnessBracelet = {
+            ram: "512 KB",
+            platforms: ["Android", "iOS"],
+            sensors: ["Пульсометр", "Акселерометр", "Гіроскоп", "Моніторинг сну"],
+
+            showInfo: function() {
+                document.write("<h2>Характеристики фітнес-браслета:</h2>");
+                document.write("<p><strong>Об'єм оперативної пам'яті:</strong> " + this.ram + "</p>");
+                document.write("<p><strong>Підтримувані платформи:</strong> " + this.platforms.join(", ") + "</p>");
+                document.write("<p><strong>Датчики:</strong> " + this.sensors.join(", ") + "</p>");
+            }
+        };
+
+        fitnessBracelet.showInfo();
+    </script>
+</body>
+</html>

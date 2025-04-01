@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>KI-404 Piskurskyi</title>
+</head>
+<body>
+    <script>
+        // let text = prompt("Введіть текст:"); // Закоментовано, використовуємо готовий текст
+        let text = "Ця програма працює правильно";
+
+        function shuffleMiddle(word) {
+            if (word.length <= 3) return word; // Якщо слово до 3 символів - не змінюємо
+            
+            let first = word[0];
+            let middle = word.slice(1, -1).split('');
+            let last = word[word.length - 1];
+
+            // Перемішування середніх літер
+            for (let i = middle.length - 1; i > 0; i--) {
+                let j = Math.floor(Math.random() * (i + 1));
+                [middle[i], middle[j]] = [middle[j], middle[i]];
+            }
+
+            return first + middle.join('') + last;
+        }
+
+        function shuffleText(text) {
+            return text.split(' ').map(shuffleMiddle).join(' ');
+        }
+
+        let shuffledText = shuffleText(text);
+        document.write("<p>Оригінальний текст: " + text + "</p>");
+        document.write("<p>Змінений текст: " + shuffledText + "</p>");
+    </script>
+</body>
+</html>

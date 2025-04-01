@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>KI-404 Piskurskyi</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      document.write(
+        "<p style='text-align:center'>Приклад знаходження найменшого числа</p>"
+      );
+      let a = 404;
+      let b = 0;
+      let c = -9;
+      if (a < b && a < c) document.write("Найменше серед трьох чисел - a = ", a);
+      else if (b < c) document.write("Найменше серед трьох чисел - b = ", b);
+      else document.write("Найменше серед трьох чисел - c = ", c);
+      let min = a < b ? a : b;
+      min = min < c ? min : c;
+      document.write("<p>Значення найменшого серед трьох чисел - ", min);
+    </script>
+  </body>
+</html>

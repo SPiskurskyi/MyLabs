@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>KI-404 Piskurskyi</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h2 style='text-align:center'>Робота з масивами</h2>");
+
+      // 1. Генеруємо масив із 15 випадкових чисел (від -50 до 50)
+      let arr = Array.from({ length: 15 }, () => Math.floor(Math.random() * 101) - 50);
+      document.write("<p>Початковий масив: " + arr.join("  ") + "</p>");
+
+      // 2. Знаходимо середнє арифметичне додатних чисел, що стоять на непарних місцях
+      let oddPositiveNumbers = arr.filter((num, index) => index % 2 === 1 && num > 0);
+      let avg = oddPositiveNumbers.length
+        ? oddPositiveNumbers.reduce((sum, num) => sum + num, 0) / oddPositiveNumbers.length
+        : 0;
+
+      document.write("<p>Середнє арифметичне додатних чисел на непарних місцях: " + avg.toFixed(2) + "</p>");
+
+      // 3. Вводимо значення C та знаходимо добуток чисел, менших за C
+      let C = parseInt(prompt("Введіть значення C:", "10"));
+      let numbersLessThanC = arr.filter(num => num < C);
+      let product = numbersLessThanC.length
+        ? numbersLessThanC.reduce((prod, num) => prod * num, 1)
+        : 0;
+
+      document.write("<p>Добуток чисел, менших за " + C + ": " + product + "</p>");
+    </script>
+  </body>
+</html>

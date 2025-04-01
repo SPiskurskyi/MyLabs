@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертор валют</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Головна</a>
+        <a href="rates.html">Курси валют</a>
+        <a href="contact.html">Контакти</a>
+    </nav>
+
+    <h1>Конвертор валют</h1>
+    <div class="container" id="converterContainer">
+        <label for="amount">Сума:</label>
+        <input type="number" id="amount" value="1">
+
+        <label for="fromCurrency">З:</label>
+        <select id="fromCurrency">
+            <option value="USD" selected>USD</option>
+            <option value="EUR">EUR</option>
+            <option value="UAH">UAH</option>
+            <option value="PLN">PLN</option>
+            <option value="GBP">GBP</option>
+        </select>
+
+        <label for="toCurrency">В:</label>
+        <select id="toCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR" selected>EUR</option>
+            <option value="UAH">UAH</option>
+            <option value="PLN">PLN</option>
+            <option value="GBP">GBP</option>
+        </select>
+
+        <button onclick="convertCurrency()">Конвертувати</button>
+        <button onclick="resetFields()">Скинути</button>
+
+        <h2 id="result">Результат: </h2>
+    </div>
+
+    <img id="infoIcon" src="../images/info.png" alt="Info" style="position: fixed; bottom: 20px; right: 20px; width: 50px; cursor: pointer;">
+
+    <div class="modal-overlay" id="modalOverlay" style="display:none;"></div>
+    <div class="modal" id="modal" style="display:none;">
+        <p>Цей конвертор дозволяє конвертувати суми між різними валютами. Введіть суму, виберіть валюти та натисніть "Конвертувати".</p>
+        <button id="closePopup">Закрити</button>
+    </div>
+
+    <div id="timer" style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); font-size: 36px;"></div>
+
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

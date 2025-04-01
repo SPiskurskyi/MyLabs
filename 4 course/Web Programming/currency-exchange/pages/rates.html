@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курси валют</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Головна</a>
+        <a href="rates.html">Курси валют</a>
+        <a href="contact.html">Контакти</a>
+    </nav>
+
+    <h1>Курси валют</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Валюта</th>
+                <th>Курс до UAH</th>
+            </tr>
+        </thead>
+        <tbody id="ratesTableBody">
+        </tbody>
+    </table>
+
+    <div id="timer" style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); font-size: 36px;"></div>
+
+    <script type="module" src="../js/rates.js"></script>
+</body>
+</html>

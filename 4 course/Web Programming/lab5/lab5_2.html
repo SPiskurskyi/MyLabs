@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>KI-404 Piskurskyi</title>
+</head>
+<body>
+    <script>
+        // let str = prompt("Введіть рядок:");
+        let str = "Цей  текст має  зайві   пробіли і  короткі  слова як  до  та ми";
+
+        // Видалення зайвих пробілів, крім тих, що між першим і другим словом
+        let words = str.trim().split(/\s+/); // Розбиваємо на слова
+        if (words.length > 2) {
+            str = words[0] + " " + words[1] + words.slice(2).join(""); // Видаляємо пробіли після другого слова
+        }
+
+        document.write("<p>Рядок після обробки: " + str + "</p>");
+
+        // Підрахунок слів, довжина яких менше 3 символів
+        let shortWordCount = words.filter(word => word.length < 3).length;
+        document.write("<p>Кількість слів довжиною менше 3: " + shortWordCount + "</p>");
+    </script>
+</body>
+</html>

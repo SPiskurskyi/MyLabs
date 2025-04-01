@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>KI-404 Piskurskyi</title>
+  </head>
+  <body>
+    <script>
+        document.write("<h2 style='text-align:center'>Обчислення факторіала</h2>");
+        document.write(
+        "<p style='text-align:center'>Завдання: Обчислити факторіал числа, яке вводить користувач, використовуючи цикли for, while і do while.</p>"
+        );
+
+        num = 10;
+
+        // Обчислення факторіала за допомогою циклу for
+        let factFor = 1;
+        for (let i = 1; i <= num; i++) {
+            factFor *= i;
+        }
+        document.write(`<h3>Цикл for: ${num}! = ${factFor}</h3>`);
+
+        // Обчислення факторіала за допомогою циклу while
+        let factWhile = 1;
+        let j = 1;
+        while (j <= num) {
+            factWhile *= j;
+            j++;
+        }
+        document.write(`<h3>Цикл while: ${num}! = ${factWhile}</h3>`);
+
+        // Обчислення факторіала за допомогою циклу do while
+        let factDoWhile = 1;
+        let k = 1;
+        do {
+            factDoWhile *= k;
+            k++;
+        } while (k <= num);
+        document.write(`<h3>Цикл do while: ${num}! = ${factDoWhile}</h3>`);
+    </script>
+  </body>
+</html>

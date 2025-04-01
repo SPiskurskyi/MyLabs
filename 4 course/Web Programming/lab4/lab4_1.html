@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>KI-404 Piskurskyi</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h2 style='text-align:center'>Обробка масивів</h2>");
+
+      // 1. Створення масиву трикутних чисел
+      let Tread = [];
+      for (let n = 1; n <= 10; n++) {
+        Tread.push((n * (n + 1)) / 2);
+      }
+      document.write("<p>Масив трикутних чисел: " + Tread.join("  ") + "</p>");
+
+      // 2. Створення масиву квадратів чисел від 1 до 10
+      let kvd = [];
+      for (let n = 1; n <= 10; n++) {
+        kvd.push(n * n);
+      }
+      document.write("<p>Масив квадратів чисел: " + kvd.join("  ") + "</p>");
+
+      // 3. Об'єднання масивів у rez
+      let rez = Tread.concat(kvd);
+      document.write("<p>Об'єднаний масив: " + rez.join("  ") + "</p>");
+
+      // 4. Відсортувати масив rez у зворотному порядку
+      rez.sort((a, b) => b - a);
+      document.write("<p>Відсортований у зворотному порядку: " + rez.join("  ") + "</p>");
+    </script>
+  </body>
+</html>

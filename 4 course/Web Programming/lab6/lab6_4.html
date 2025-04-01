@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>KI-404 Piskurskyi</title>
+</head>
+<body>
+    <script>
+        class FitnessBracelet {
+            constructor(ram, platforms, sensors) {
+                this._ram = ram;
+                this._platforms = platforms;
+                this._sensors = sensors;
+            }
+
+            get ram() {
+                return this._ram;
+            }
+            get platforms() {
+                return this._platforms;
+            }
+            get sensors() {
+                return this._sensors;
+            }
+
+            set ram(value) {
+                if (value > 0) {
+                    this._ram = value;
+                } else {
+                    console.error("Об'єм оперативної пам'яті має бути більше 0!");
+                }
+            }
+
+            set platforms(value) {
+                if (Array.isArray(value)) {
+                    this._platforms = value;
+                } else {
+                    console.error("Платформи повинні бути у вигляді масиву!");
+                }
+            }
+
+            set sensors(value) {
+                if (Array.isArray(value)) {
+                    this._sensors = value;
+                } else {
+                    console.error("Датчики повинні бути у вигляді масиву!");
+                }
+            }
+
+            showInfo() {
+                document.write("<h2>Характеристики фітнес-браслета:</h2>");
+                document.write(`<p><strong>Об'єм оперативної пам'яті:</strong> ${this.ram}</p>`);
+                document.write(`<p><strong>Підтримувані платформи:</strong> ${this.platforms.join(", ")}</p>`);
+                document.write(`<p><strong>Датчики:</strong> ${this.sensors.join(", ")}</p>`);
+            }
+        }
+
+        class SmartFitnessBracelet extends FitnessBracelet {
+            constructor(ram, platforms, sensors, releaseDate, price) {
+                super(ram, platforms, sensors);
+                this.releaseDate = releaseDate;
+                this.price = price;
+            }
+
+            get price() {
+                return this._price;
+            }
+
+            set price(value) {
+                if (value > 0) {
+                    this._price = value;
+                } else {
+                    console.error("Вартість повинна бути більшою за 0!");
+                }
+            }
+
+            showInfo() {
+                document.write("<h2>Розширені характеристики фітнес-браслета:</h2>");
+                document.write(`<p><strong>Об'єм оперативної пам'яті:</strong> ${this.ram}</p>`);
+                document.write(`<p><strong>Підтримувані платформи:</strong> ${this.platforms.join(", ")}</p>`);
+                document.write(`<p><strong>Датчики:</strong> ${this.sensors.join(", ")}</p>`);
+                document.write(`<p><strong>Дата виходу на ринок:</strong> ${this.releaseDate}</p>`);
+                document.write(`<p><strong>Вартість:</strong> ${this.price} грн</p>`);
+            }
+        }
+
+        let mySmartBracelet = new SmartFitnessBracelet(
+            "1 GB",
+            ["Android", "iOS"],
+            ["Пульсометр", "Акселерометр", "Гіроскоп", "GPS"],
+            "2024-02-10",
+            2499
+        );
+
+        mySmartBracelet.showInfo();
+    </script>
+</body>
+</html>

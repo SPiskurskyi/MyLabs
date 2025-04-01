@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>KI-404 Piskurskyi</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h2 style='text-align:center'>Гра \"Вгадай число\"</h2>");
+      document.write(
+        "<p style='text-align:center'>Завдання: Створіть гру, у якій користувач має вгадати випадкове число \
+        від 1 до 10. Гра повинна тривати, поки користувач не введе правильне число.</p>"
+      );
+
+      let secretNumber = Math.floor(Math.random() * 10) + 1;
+      let guess = 0;
+
+      while (guess != secretNumber) {
+        guess = prompt("Вгадай число від 1 до 10:");
+        if (guess === null) {
+          document.write("<p style='color:red; text-align:center'>Гру перервано.</p>");
+          break;
+        }
+        guess = parseInt(guess);
+        if (isNaN(guess) || guess < 1 || guess > 10) {
+          alert("Будь ласка, введіть число від 1 до 10.");
+        } else if (guess < secretNumber) {
+          alert("Загадане число більше!");
+        } else if (guess > secretNumber) {
+          alert("Загадане число менше!");
+        } else {
+          alert("Вітаємо! Ви вгадали число!");
+          document.write("<p style='color:green; text-align:center'>Ви вгадали число " + secretNumber + "!</p>");
+        }
+      }
+    </script>
+  </body>
+</html>

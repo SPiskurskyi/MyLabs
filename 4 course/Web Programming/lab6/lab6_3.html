@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>KI-404 Piskurskyi</title>
+</head>
+<body>
+    <script>
+        class FitnessBracelet {
+            constructor(ram, platforms, sensors, releaseDate) {
+                this._ram = ram;
+                this._platforms = platforms;
+                this._sensors = sensors;
+                this.releaseDate = releaseDate;
+            }
+
+            get ram() {
+                return this._ram;
+            }
+            get platforms() {
+                return this._platforms;
+            }
+            get sensors() {
+                return this._sensors;
+            }
+
+            set ram(value) {
+                if (value > 0) {
+                    this._ram = value;
+                } else {
+                    console.error("Об'єм оперативної пам'яті має бути більше 0!");
+                }
+            }
+
+            set platforms(value) {
+                if (Array.isArray(value)) {
+                    this._platforms = value;
+                } else {
+                    console.error("Платформи повинні бути у вигляді масиву!");
+                }
+            }
+
+            set sensors(value) {
+                if (Array.isArray(value)) {
+                    this._sensors = value;
+                } else {
+                    console.error("Датчики повинні бути у вигляді масиву!");
+                }
+            }
+
+            showInfo() {
+                document.write("<h2>Характеристики фітнес-браслета:</h2>");
+                document.write(`<p><strong>Об'єм оперативної пам'яті:</strong> ${this.ram}</p>`);
+                document.write(`<p><strong>Підтримувані платформи:</strong> ${this.platforms.join(", ")}</p>`);
+                document.write(`<p><strong>Датчики:</strong> ${this.sensors.join(", ")}</p>`);
+                document.write(`<p><strong>Дата виходу на ринок:</strong> ${this.releaseDate}</p>`);
+            }
+        }
+
+        let myBracelet = new FitnessBracelet(
+            "512 KB",
+            ["Android", "iOS"],
+            ["Пульсометр", "Акселерометр", "Гіроскоп"],
+            "2024-01-15"
+        );
+
+        myBracelet.showInfo();
+    </script>
+</body>
+</html>
